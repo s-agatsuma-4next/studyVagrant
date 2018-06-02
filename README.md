@@ -20,8 +20,10 @@ https://www.vagrantup.com/downloads.html
 
 ### Vagrantfileの設定
 - ipを設定する
+
 config.vm.network "private_network", ip: "192.168.33.10"
 - プロビジョニングが実行されるようにする
+
 config.vm.provision :shell, :path => "provision.sh"
 
 ### プロビジョニング設定

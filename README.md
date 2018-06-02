@@ -18,12 +18,18 @@ https://www.vagrantup.com/downloads.html
 - vagrant up
 - vagrant ssh # vmにsshできればひとまずOK
 
-### Vagrantfileの設定
-- ipを設定する
+### Vagrantfileでipを設定する
+- Vagrantfileに追記
 
 config.vm.network "private_network", ip: "192.168.33.10"
 - プロビジョニングが実行されるようにする
 
 config.vm.provision :shell, :path => "provision.sh"
 
-### プロビジョニング設定
+### プロビジョニングでapache + phpをインストールする
+- apache + phpをインストールする
+ - provision.shにインストールコマンドを追記
+ - vagrant up
+ - vagrant provision
+
+しかかり
